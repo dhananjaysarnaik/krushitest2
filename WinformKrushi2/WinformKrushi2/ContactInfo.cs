@@ -10,17 +10,18 @@ using System.Windows.Forms;
 
 namespace WinformKrushi2
 {
-    public partial class Form1 : Form
+    public partial class ContactInfo : Form
     {
-        public Form1()
+        public ContactInfo()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ContactInfo c1 = new ContactInfo();
-            c1.Show();
+            WelcomeScr wc = new WelcomeScr();
+            wc.mycustomer(textBox1.Text, int.Parse(textBox2.Text));
+            wc.Show();
             this.Close();
         }
     }
